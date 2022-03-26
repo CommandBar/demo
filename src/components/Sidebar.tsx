@@ -2,20 +2,23 @@ import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import {
   CalendarIcon,
-  ChartBarIcon,
-  FolderIcon,
-  HomeIcon,
   InboxIcon,
   UsersIcon,
   XIcon,
 } from "@heroicons/react/outline";
 import classNames from "./utils";
+import { Link } from "react-router-dom";
 
 const navigation = [
   //   { name: "Overview", href: "#", icon: HomeIcon, current: true },
-  { name: "Leads", href: "#", icon: UsersIcon, current: true },
-  { name: "Calendar", href: "#", icon: CalendarIcon, current: false },
-  { name: "Integrations", href: "#", icon: InboxIcon, current: false },
+  { name: "Leads", href: "/leads", icon: UsersIcon, current: true },
+  { name: "Calendar", href: "/calendar", icon: CalendarIcon, current: false },
+  {
+    name: "Integrations",
+    href: "/integrations",
+    icon: InboxIcon,
+    current: false,
+  },
   //   { name: "Account", href: "#", icon: ChartBarIcon, current: false },
 ];
 
@@ -83,9 +86,10 @@ export default function Sidebar(props: {
               <div className="mt-5 flex-1 h-0 overflow-y-auto">
                 <nav className="px-2 space-y-1">
                   {navigation.map((item) => (
-                    <a
+                    <Link
+                      to={item.href}
                       key={item.name}
-                      href={item.href}
+                      //   href={item.href}
                       className={classNames(
                         item.current
                           ? "bg-gray-100 text-gray-900"
@@ -103,7 +107,7 @@ export default function Sidebar(props: {
                         aria-hidden="true"
                       />
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </nav>
               </div>
@@ -129,9 +133,9 @@ export default function Sidebar(props: {
           <div className="flex-grow mt-5 flex flex-col">
             <nav className="flex-1 px-2 pb-4 space-y-1">
               {navigation.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className={classNames(
                     item.current
                       ? "bg-gray-100 text-gray-900"
@@ -149,7 +153,7 @@ export default function Sidebar(props: {
                     aria-hidden="true"
                   />
                   {item.name}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>
