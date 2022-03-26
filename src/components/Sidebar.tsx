@@ -79,8 +79,8 @@ export default function Sidebar(props: {
               <div className="flex-shrink-0 px-4 flex items-center">
                 <img
                   className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
-                  alt="Workflow"
+                  src="https://staticassets.commandbar.com/brand/logo_wordmark.svg"
+                  alt="CommandBar"
                 />
               </div>
               <div className="mt-5 flex-1 h-0 overflow-y-auto">
@@ -126,8 +126,8 @@ export default function Sidebar(props: {
           <div className="flex-shrink-0 px-4 flex items-center">
             <img
               className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
-              alt="Workflow"
+              src="https://staticassets.commandbar.com/brand/logo_wordmark.svg"
+              alt="CommandBar"
             />
           </div>
           <div className="flex-grow mt-5 flex flex-col">
