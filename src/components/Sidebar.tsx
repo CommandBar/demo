@@ -12,12 +12,11 @@ import {
 import classNames from "./utils";
 
 const navigation = [
-  { name: "Overview", href: "#", icon: HomeIcon, current: true },
-  { name: "Leads", href: "#", icon: UsersIcon, current: false },
-  { name: "Pipeline", href: "#", icon: FolderIcon, current: false },
+  //   { name: "Overview", href: "#", icon: HomeIcon, current: true },
+  { name: "Leads", href: "#", icon: UsersIcon, current: true },
   { name: "Calendar", href: "#", icon: CalendarIcon, current: false },
   { name: "Integrations", href: "#", icon: InboxIcon, current: false },
-  { name: "Account", href: "#", icon: ChartBarIcon, current: false },
+  //   { name: "Account", href: "#", icon: ChartBarIcon, current: false },
 ];
 
 export default function Sidebar(props: {
