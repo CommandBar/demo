@@ -1,26 +1,26 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useSnapshot } from "valtio";
 import { addNoteToCompany } from "../../store/actions";
-import { selectCompanyById, selectStageOfCompany } from "../../store/selectors";
 import _ from "../../store/store";
+import { selectCompanyById, selectStageOfCompany } from "../../store/selectors";
 import { CompanyNote, User } from "../../store/types";
 import Breadcrumbs from "../Breadcrumbs";
 
 export default function CompanyDetail() {
   const { id } = useParams();
-  const store = useSnapshot(_);
-  const company = selectCompanyById(store, id);
+  const snapshot = useSnapshot(_);
+  const company = selectCompanyById(snapshot, id);
   const navigate = useNavigate();
 
   // FIXME
   if (!company) return <div>Not found</div>;
-  const stage = selectStageOfCompany(store, company);
+  const stage = selectStageOfCompany(snapshot, company);
 
   const getAuthor = (note: CompanyNote): User => {
     if (note.createdByCurrentUser) {
-      return store.currentUser;
+      return snapshot.currentUser;
     } else {
-      return store.otherUser;
+      return snapshot.otherUser;
     }
   };
 
@@ -200,7 +200,7 @@ export default function CompanyDetail() {
                       <div className="flex-shrink-0">
                         <img
                           className="h-10 w-10 rounded-full"
-                          src={store.currentUser.imgURL}
+                          src={snapshot.currentUser.imgURL}
                           alt=""
                         />
                       </div>
@@ -218,7 +218,6 @@ export default function CompanyDetail() {
                               );
 
                               addNoteToCompany(
-                                _,
                                 company.id,
                                 data.get("comment") as string | null
                               );

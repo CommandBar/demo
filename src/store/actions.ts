@@ -1,13 +1,9 @@
 import { nanoid } from "nanoid";
 import { formatISO } from "../components/utils";
-import { Store } from "./store";
+import store from "./store";
 import { Company, CompanyNote } from "./types";
 
-export const addNoteToCompany = (
-  state: Store,
-  companyId: string,
-  note: string | null
-) => {
+export const addNoteToCompany = (companyId: string, note: string | null) => {
   if (!!note) {
     const newNote: CompanyNote = {
       id: nanoid(),
@@ -16,7 +12,7 @@ export const addNoteToCompany = (
       createdByCurrentUser: true,
     };
 
-    const company = state.companies.find((c) => c.id === companyId);
+    const company = store.companies.find((c) => c.id === companyId);
     if (company) {
       company.notes = [...company.notes, newNote];
     }
@@ -24,12 +20,11 @@ export const addNoteToCompany = (
 };
 
 export const editCompanyDetails = (
-  state: Store,
   companyId: string,
   field: keyof Company,
   value: any
 ) => {
-  const company = state.companies.find((c) => c.id === companyId);
+  const company = store.companies.find((c) => c.id === companyId);
   if (company) {
     // @ts-ignore
     company[field] = value;

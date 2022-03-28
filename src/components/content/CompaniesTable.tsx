@@ -2,9 +2,9 @@ import { useSnapshot } from "valtio";
 import _ from "../../store/store";
 import { selectStageOfCompany } from "../../store/selectors";
 import { Company } from "../../store/types";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export default function CompaniesTable() {
-  const store = useSnapshot(_);
+  const snapshot = useSnapshot(_);
 
   return (
     <div className="px-4 sm:px-6 lg:px-8">
@@ -59,7 +59,7 @@ export default function CompaniesTable() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 bg-white">
-                  {store.companies.map((company) => (
+                  {snapshot.companies.map((company) => (
                     // <Link to={`/leads/${company.id}`}>
                     <CompanyRow company={company} />
                     // </Link>
@@ -76,6 +76,7 @@ export default function CompaniesTable() {
 
 const CompanyRow = (props: { company: Company }) => {
   const { company } = props;
+  const snapshot = useSnapshot(_);
   const navigate = useNavigate();
 
   const onClick = () => {
@@ -107,7 +108,7 @@ const CompanyRow = (props: { company: Company }) => {
       </td>
       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
         <span className="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">
-          {selectStageOfCompany(_, company)?.name}
+          {selectStageOfCompany(snapshot, company)?.name}
         </span>
       </td>
     </tr>

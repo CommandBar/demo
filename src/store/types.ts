@@ -1,6 +1,7 @@
 // Handle type conflicts from deep readonly types from valtio useSnapshot
 declare module "valtio" {
   function useSnapshot<T extends object>(p: T): T;
+  function snapshot<T extends object>(p: T): T;
 }
 
 export interface Company {

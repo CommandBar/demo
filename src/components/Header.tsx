@@ -28,13 +28,9 @@ export default function Header(props: {
               <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center">
                 <SearchIcon className="h-5 w-5" aria-hidden="true" />
               </div>
-              <input
-                id="search-field"
-                className="block h-full w-full border-transparent py-2 pl-8 pr-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-0 focus:border-transparent sm:text-sm"
-                placeholder="Search"
-                type="search"
-                name="search"
-              />
+              <div className="block h-full w-full border-transparent py-2 pl-8 pr-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-0 focus:border-transparent sm:text-sm">
+                Search for anything (cmd+k)
+              </div>
             </div>
           </form>
         </div>

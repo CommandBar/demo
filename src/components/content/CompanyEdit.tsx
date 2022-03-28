@@ -7,8 +7,9 @@ import Breadcrumbs from "../Breadcrumbs";
 
 export default function CompanyDetail() {
   const { id } = useParams();
-  const store = useSnapshot(_);
-  const company = selectCompanyById(store, id);
+  const snapshot = useSnapshot(_);
+
+  const company = selectCompanyById(snapshot, id);
   const navigate = useNavigate();
 
   // FIXME
@@ -37,15 +38,14 @@ export default function CompanyDetail() {
       //@ts-ignore
       const stageId = form.elements["stage"]?.value;
 
-      editCompanyDetails(_, company.id, "contactName", contactName);
-      editCompanyDetails(_, company.id, "contactEmail", contactEmail);
+      editCompanyDetails(company.id, "contactName", contactName);
+      editCompanyDetails(company.id, "contactEmail", contactEmail);
       editCompanyDetails(
-        _,
         company.id,
         "annualContractValue",
         annualContractValue
       );
-      editCompanyDetails(_, company.id, "stageId", stageId);
+      editCompanyDetails(company.id, "stageId", stageId);
       form.reset();
       navigate(`/leads/${company.id}`);
     }
@@ -157,7 +157,7 @@ export default function CompanyDetail() {
                             className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
                             defaultValue={company.stageId}
                           >
-                            {store.stages.map((s) => (
+                            {snapshot.stages.map((s) => (
                               <option value={s.id}>{s.name}</option>
                             ))}
                           </select>
