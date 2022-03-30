@@ -12,7 +12,6 @@ export default function CompanyDetail() {
   const company = selectCompanyById(snapshot, id);
   const navigate = useNavigate();
 
-  // FIXME
   if (!company) return <div>Not found</div>;
   const stage = selectStageOfCompany(snapshot, company);
 
@@ -131,8 +130,11 @@ export default function CompanyDetail() {
                           Labels
                         </dt>
                         <dd className="mt-1 text-sm text-gray-900">
-                          {company.labels.map((label) => (
-                            <span className="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-gray-100 text-gray-800">
+                          {company.labels.map((label, i) => (
+                            <span
+                              key={i}
+                              className="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-gray-100 text-gray-800"
+                            >
                               {label}
                             </span>
                           ))}
@@ -204,8 +206,9 @@ export default function CompanyDetail() {
                           onSubmit={(e) => {
                             e.preventDefault();
 
-                            const form =
-                              document.getElementById("add-note-form");
+                            const form = document.getElementById(
+                              "add-note-form"
+                            ) as HTMLFormElement;
                             if (form) {
                               const data = new FormData(
                                 form as HTMLFormElement
@@ -215,7 +218,6 @@ export default function CompanyDetail() {
                                 company.id,
                                 data.get("comment") as string | null
                               );
-                              //@ts-ignore
                               form.reset();
                             }
                           }}

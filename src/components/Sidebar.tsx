@@ -1,17 +1,11 @@
-import { useCallback, Fragment } from "react";
+import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import {
-  CalendarIcon,
-  InboxIcon,
-  UsersIcon,
-  XIcon,
-} from "@heroicons/react/outline";
+import { InboxIcon, UsersIcon, XIcon } from "@heroicons/react/outline";
 import classNames from "./utils";
 import { Link, useLocation } from "react-router-dom";
 
 const navigation = [
   { name: "Leads", href: "/leads", icon: UsersIcon },
-  { name: "Calendar", href: "/calendar", icon: CalendarIcon },
   {
     name: "Integrations",
     href: "/integrations",
