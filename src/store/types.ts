@@ -31,6 +31,8 @@ export interface Stage {
   name: string;
 }
 
+export type Integration = "Slack" | "Jira" | "Hubspot" | "Salesforce";
+
 export const CURRENCIES = ["USD", "GBP", "EUR", "JPY", "BTC", "DOGE"] as const;
 export const CURRENCY_SYMBOLS: Record<Currency, string> = {
   USD: "$",

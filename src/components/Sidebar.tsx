@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { useCallback, Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import {
   CalendarIcon,
@@ -7,19 +7,16 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import classNames from "./utils";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const navigation = [
-  //   { name: "Overview", href: "#", icon: HomeIcon, current: true },
-  { name: "Leads", href: "/leads", icon: UsersIcon, current: true },
-  { name: "Calendar", href: "/calendar", icon: CalendarIcon, current: false },
+  { name: "Leads", href: "/leads", icon: UsersIcon },
+  { name: "Calendar", href: "/calendar", icon: CalendarIcon },
   {
     name: "Integrations",
     href: "/integrations",
     icon: InboxIcon,
-    current: false,
   },
-  //   { name: "Account", href: "#", icon: ChartBarIcon, current: false },
 ];
 
 export default function Sidebar(props: {
@@ -27,6 +24,11 @@ export default function Sidebar(props: {
   setSidebarOpen: (open: boolean) => void;
 }) {
   const { sidebarOpen, setSidebarOpen } = props;
+  const location = useLocation();
+
+  const isActive = (menuElemPath: string) =>
+    (location.pathname + location.hash).startsWith(menuElemPath);
+
   return (
     <>
       <Transition.Root show={sidebarOpen} as={Fragment}>
@@ -91,7 +93,7 @@ export default function Sidebar(props: {
                       key={item.name}
                       //   href={item.href}
                       className={classNames(
-                        item.current
+                        isActive(item.href)
                           ? "bg-gray-100 text-gray-900"
                           : "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
                         "group rounded-md py-2 px-2 flex items-center text-base font-medium"
@@ -99,7 +101,7 @@ export default function Sidebar(props: {
                     >
                       <item.icon
                         className={classNames(
-                          item.current
+                          isActive(item.href)
                             ? "text-gray-500"
                             : "text-gray-400 group-hover:text-gray-500",
                           "mr-4 flex-shrink-0 h-6 w-6"
@@ -137,7 +139,7 @@ export default function Sidebar(props: {
                   key={item.name}
                   to={item.href}
                   className={classNames(
-                    item.current
+                    isActive(item.href)
                       ? "bg-gray-100 text-gray-900"
                       : "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
                     "group rounded-md py-2 px-2 flex items-center text-sm font-medium"
@@ -145,7 +147,7 @@ export default function Sidebar(props: {
                 >
                   <item.icon
                     className={classNames(
-                      item.current
+                      isActive(item.href)
                         ? "text-gray-500"
                         : "text-gray-400 group-hover:text-gray-500",
                       "mr-3 flex-shrink-0 h-6 w-6"
