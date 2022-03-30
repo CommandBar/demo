@@ -1,9 +1,15 @@
 import { useSnapshot } from "valtio";
 import classNames from "../utils";
 import _ from "../../store/store";
+import { Integration } from "../../store/types";
+import { useNavigate } from "react-router-dom";
 
 export default function Example() {
   const { integrations } = useSnapshot(_);
+  const navigate = useNavigate();
+  const openIntegrationDetail = (integration: Integration) => {
+    navigate(`/integrations/${integration.title}`);
+  };
   return (
     <div className="rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px m-12">
       {integrations.map((integration, idx) => (
@@ -18,6 +24,7 @@ export default function Example() {
               : "",
             "relative group bg-white p-10 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500"
           )}
+          onClick={() => openIntegrationDetail(integration)}
         >
           <div>
             <span

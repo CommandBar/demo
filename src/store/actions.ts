@@ -30,3 +30,15 @@ export const editCompanyDetails = (
     company[field] = value;
   }
 };
+
+export const changeIntegrationEnabled = (
+  integrationTitle: string,
+  enabled: boolean
+) => {
+  const integration = store.integrations.find(
+    (v) => v.title === integrationTitle
+  );
+  if (integration) {
+    integration.enabled = enabled;
+  }
+};
