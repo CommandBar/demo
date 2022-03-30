@@ -1,77 +1,19 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  const colors = require('tailwindcss/colors')
-  
-  module.exports = {
-    // ...
-    theme: {
-      extend: {
-        colors: {
-          sky: colors.sky,
-          teal: colors.teal,
-          rose: colors.rose,
-        },
-      },
-    },
-  }
-  ```
-*/
-import {
-  BadgeCheckIcon,
-  CashIcon,
-  ClockIcon,
-  UsersIcon,
-} from "@heroicons/react/outline";
-import { Integration } from "../../store/types";
+import { useSnapshot } from "valtio";
 import classNames from "../utils";
-
-interface IntegrationDetail {
-  title: Integration;
-  iconURL: string;
-  text: string;
-}
-
-const actions: IntegrationDetail[] = [
-  {
-    title: "Slack",
-    iconURL: "https://staticassets.commandbar.com/showcase/slack.png",
-    text: "Keep your team in the loop with CRM changes.",
-  },
-  {
-    title: "Salesforce",
-    iconURL: "https://staticassets.commandbar.com/showcase/salesforce.png",
-    text: "Keep your team in the loop with CRM changes.",
-  },
-  {
-    title: "Jira",
-    iconURL: "https://staticassets.commandbar.com/showcase/jira.png",
-    text: "Keep your team in the loop with CRM changes.",
-  },
-  {
-    title: "Hubspot",
-    iconURL: "https://staticassets.commandbar.com/showcase/hubspot.png",
-    text: "Keep your team in the loop with CRM changes.",
-  },
-];
+import _ from "../../store/store";
 
 export default function Example() {
+  const { integrations } = useSnapshot(_);
   return (
     <div className="rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px m-12">
-      {actions.map((action, actionIdx) => (
+      {integrations.map((integration, idx) => (
         <div
-          key={action.title}
+          key={integration.title}
           className={classNames(
-            actionIdx === 0
-              ? "rounded-tl-lg rounded-tr-lg sm:rounded-tr-none"
-              : "",
-            actionIdx === 1 ? "sm:rounded-tr-lg" : "",
-            actionIdx === actions.length - 2 ? "sm:rounded-bl-lg" : "",
-            actionIdx === actions.length - 1
+            idx === 0 ? "rounded-tl-lg rounded-tr-lg sm:rounded-tr-none" : "",
+            idx === 1 ? "sm:rounded-tr-lg" : "",
+            idx === integrations.length - 2 ? "sm:rounded-bl-lg" : "",
+            idx === integrations.length - 1
               ? "rounded-bl-lg rounded-br-lg sm:rounded-bl-none"
               : "",
             "relative group bg-white p-10 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500"
@@ -83,16 +25,20 @@ export default function Example() {
                 "rounded-lg inline-flex p-3 ring-4 ring-white"
               )}
             >
-              <img className="h-10" aria-hidden="true" src={action.iconURL} />
+              <img
+                className="h-10"
+                aria-hidden="true"
+                src={integration.iconURL}
+              />
             </span>
           </div>
           <div className="mt-4">
             <h3 className="text-lg font-medium">
               {/* Extend touch target to entire panel */}
               <span className="absolute inset-0" aria-hidden="true" />
-              {action.title}
+              {integration.title}
             </h3>
-            <p className="mt-2 text-sm text-gray-500">{action.text}</p>
+            <p className="mt-2 text-sm text-gray-500">{integration.text}</p>
           </div>
           <span
             className="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-gray-400"

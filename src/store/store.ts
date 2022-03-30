@@ -4,11 +4,13 @@
 import { proxy } from "valtio";
 import companies from "./data/companies";
 import stages from "./data/stages";
-import { Company, Stage, User } from "./types";
+import integrations from "./data/integrations";
+import { Company, Integration, Stage, User } from "./types";
 
 export interface Store {
   companies: Company[];
   stages: Stage[];
+  integrations: Integration[];
   currentUser: User;
   otherUser: User;
 }
@@ -16,6 +18,7 @@ export interface Store {
 const store: Store = proxy({
   companies,
   stages,
+  integrations,
   currentUser: {
     name: "Jim Halpert",
     imgURL:
