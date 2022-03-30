@@ -51,9 +51,7 @@ export default function CompaniesTable() {
                 </thead>
                 <tbody className="divide-y divide-gray-200 bg-white">
                   {snapshot.companies.map((company) => (
-                    // <Link to={`/leads/${company.id}`}>
-                    <CompanyRow company={company} />
-                    // </Link>
+                    <CompanyRow key={company.id} company={company} />
                   ))}
                 </tbody>
               </table>
