@@ -12,7 +12,6 @@ export default function CompanyDetail() {
   const company = selectCompanyById(snapshot, id);
   const navigate = useNavigate();
 
-  // FIXME
   if (!company) return <div>Not found</div>;
 
   const breadcrumbs = [
@@ -28,15 +27,17 @@ export default function CompanyDetail() {
       "edit-company-form"
     ) as HTMLFormElement | null;
     if (form) {
-      // FIMXE: forms are the worst
-      //@ts-ignore
-      const contactName = form.elements["contactName"]?.value;
-      //@ts-ignore
-      const contactEmail = form.elements["contactEmail"]?.value;
-      //@ts-ignore
-      const annualContractValue = form.elements["annualContractValue"]?.value;
-      //@ts-ignore
-      const stageId = form.elements["stage"]?.value;
+      const contactName = (
+        form.elements.namedItem("contactName") as HTMLInputElement
+      ).value;
+      const contactEmail = (
+        form.elements.namedItem("contactEmail") as HTMLInputElement
+      ).value;
+      const annualContractValue = (
+        form.elements.namedItem("annualContractValue") as HTMLInputElement
+      ).value;
+      const stageId = (form.elements.namedItem("stage") as HTMLInputElement)
+        .value;
 
       editCompanyDetails(company.id, "contactName", contactName);
       editCompanyDetails(company.id, "contactEmail", contactEmail);
@@ -158,7 +159,9 @@ export default function CompanyDetail() {
                             defaultValue={company.stageId}
                           >
                             {snapshot.stages.map((s) => (
-                              <option value={s.id}>{s.name}</option>
+                              <option key={s.id} value={s.id}>
+                                {s.name}
+                              </option>
                             ))}
                           </select>
                         </div>
