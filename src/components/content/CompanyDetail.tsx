@@ -40,7 +40,7 @@ export default function CompanyDetail() {
                 <div className="relative">
                   <img
                     className="h-16 w-16 rounded-full"
-                    src={company.logoURL}
+                    src={company.icon}
                     alt=""
                   />
                   <span

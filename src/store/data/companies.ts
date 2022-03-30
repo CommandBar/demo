@@ -18,7 +18,7 @@ const companies: Company[] = [
     ],
     labels: ["Retail"],
     annualContractValue: 10000,
-    logoURL: "https://staticassets.commandbar.com/showcase/krusty-krab.jpeg",
+    icon: "https://staticassets.commandbar.com/showcase/krusty-krab.jpeg",
   },
   {
     id: "0CdnnZ-9gIP4TgQo8T2nX",
@@ -45,7 +45,7 @@ const companies: Company[] = [
     ],
     labels: ["Entertainment"],
     annualContractValue: 42069,
-    logoURL: "https://staticassets.commandbar.com/showcase/gamestop.png",
+    icon: "https://staticassets.commandbar.com/showcase/gamestop.png",
   },
   {
     id: "6ceGtjdiPqc3FiKtsur4O",
@@ -62,8 +62,7 @@ const companies: Company[] = [
     ],
     labels: ["Technology"],
     annualContractValue: 50000,
-    logoURL:
-      "https://staticassets.commandbar.com/showcase/stark-industries.png",
+    icon: "https://staticassets.commandbar.com/showcase/stark-industries.png",
   },
   {
     id: "rWi0oXecycPPGlHJucEHs",
@@ -80,8 +79,7 @@ const companies: Company[] = [
     ],
     labels: ["R&D", "VIP"],
     annualContractValue: 100000,
-    logoURL:
-      "https://staticassets.commandbar.com/showcase/wayne-enterprises.png",
+    icon: "https://staticassets.commandbar.com/showcase/wayne-enterprises.png",
   },
   {
     id: "d1aF3rxUGoKDA03Wiman1",
@@ -98,8 +96,7 @@ const companies: Company[] = [
     ],
     labels: ["Finance"],
     annualContractValue: 50000,
-    logoURL:
-      "https://staticassets.commandbar.com/showcase/iron-bank-braavos.png",
+    icon: "https://staticassets.commandbar.com/showcase/iron-bank-braavos.png",
   },
   {
     id: "CXoEenzQAul06-Aeij_Ll",
@@ -116,7 +113,7 @@ const companies: Company[] = [
     ],
     labels: ["Energy"],
     annualContractValue: 10000,
-    logoURL: "https://staticassets.commandbar.com/showcase/monsters-inc.png",
+    icon: "https://staticassets.commandbar.com/showcase/monsters-inc.png",
   },
   {
     id: "ItTyBih2sa79gh7VWSaZB",
@@ -133,7 +130,7 @@ const companies: Company[] = [
     ],
     labels: ["Construction"],
     annualContractValue: 50000,
-    logoURL: "https://staticassets.commandbar.com/showcase/bluth-company.jpeg",
+    icon: "https://staticassets.commandbar.com/showcase/bluth-company.jpeg",
   },
   {
     id: "RYqEEksfj8LxcnXfD_w9f",
@@ -160,7 +157,7 @@ const companies: Company[] = [
     ],
     labels: ["Government"],
     annualContractValue: 10000,
-    logoURL: "https://staticassets.commandbar.com/showcase/pawnee-p-and-r.png",
+    icon: "https://staticassets.commandbar.com/showcase/pawnee-p-and-r.png",
   },
   {
     id: "0QYl_JHP3SZkNr4SbP7O-",
@@ -182,8 +179,7 @@ const companies: Company[] = [
     ],
     labels: ["Retail"],
     annualContractValue: 5000,
-    logoURL:
-      "https://staticassets.commandbar.com/showcase/kims-convenience.png",
+    icon: "https://staticassets.commandbar.com/showcase/kims-convenience.png",
   },
   {
     id: "ai46vK2dHkr0SWnAKMbOj",
@@ -200,8 +196,7 @@ const companies: Company[] = [
     ],
     labels: ["Professional Services"],
     annualContractValue: 50000,
-    logoURL:
-      "https://staticassets.commandbar.com/showcase/pearson-specter-litt.png",
+    icon: "https://staticassets.commandbar.com/showcase/pearson-specter-litt.png",
   },
   {
     id: "AhRbdE9E-QUaIkk3QiBYD",
@@ -223,7 +218,7 @@ const companies: Company[] = [
     ],
     labels: ["Technology"],
     annualContractValue: 50000,
-    logoURL: "https://staticassets.commandbar.com/showcase/pied-piper.jpeg",
+    icon: "https://staticassets.commandbar.com/showcase/pied-piper.jpeg",
   },
   {
     id: "dRqjKQyfxeVqkwklZAYo9",
@@ -240,7 +235,7 @@ const companies: Company[] = [
     ],
     labels: ["Retail"],
     annualContractValue: 50000,
-    logoURL: "https://staticassets.commandbar.com/showcase/rent-a-swag.png",
+    icon: "https://staticassets.commandbar.com/showcase/rent-a-swag.png",
   },
   {
     id: "gduWOGE_bH9dYKWoCUSdU",
@@ -262,8 +257,7 @@ const companies: Company[] = [
     ],
     labels: ["Philanthropy"],
     annualContractValue: 50000,
-    logoURL:
-      "https://staticassets.commandbar.com/showcase/derek-zoolander.jpeg",
+    icon: "https://staticassets.commandbar.com/showcase/derek-zoolander.jpeg",
   },
   {
     id: "6EDvml-61PHLGZEW8rZTc",
@@ -280,7 +274,7 @@ const companies: Company[] = [
     ],
     labels: ["Health"],
     annualContractValue: 15000,
-    logoURL: "https://staticassets.commandbar.com/showcase/theranos.png",
+    icon: "https://staticassets.commandbar.com/showcase/theranos.png",
   },
   {
     id: "dynA6j-STLk2hLiC5R5jR",
@@ -302,7 +296,7 @@ const companies: Company[] = [
     ],
     labels: ["Retail"],
     annualContractValue: 30000,
-    logoURL: "https://staticassets.commandbar.com/showcase/juicero.jpeg",
+    icon: "https://staticassets.commandbar.com/showcase/juicero.jpeg",
   },
   {
     id: "nLMRSN-0ip0oI9jLTDbYL",
@@ -319,7 +313,7 @@ const companies: Company[] = [
     ],
     labels: ["Finance"],
     annualContractValue: 250000,
-    logoURL: "https://staticassets.commandbar.com/showcase/lehman-bros.svg",
+    icon: "https://staticassets.commandbar.com/showcase/lehman-bros.svg",
   },
   {
     id: "1yjvoe-kPTv9TGvpA9z5z",
@@ -336,7 +330,7 @@ const companies: Company[] = [
     ],
     labels: ["Entertainment"],
     annualContractValue: 30000,
-    logoURL: "https://staticassets.commandbar.com/showcase/quibi.jpeg",
+    icon: "https://staticassets.commandbar.com/showcase/quibi.jpeg",
   },
   {
     id: "wo25pG-YkhOUiTycEze0m",
@@ -358,7 +352,7 @@ const companies: Company[] = [
     ],
     labels: ["Entertainment"],
     annualContractValue: 30000,
-    logoURL: "https://staticassets.commandbar.com/showcase/myspace.jpeg",
+    icon: "https://staticassets.commandbar.com/showcase/myspace.jpeg",
   },
   {
     id: "mH1g0l-J3BPxIV9uCRJLE",
@@ -375,7 +369,7 @@ const companies: Company[] = [
     ],
     labels: ["Social Media"],
     annualContractValue: 50000,
-    logoURL: "https://staticassets.commandbar.com/showcase/yik-yak.png",
+    icon: "https://staticassets.commandbar.com/showcase/yik-yak.png",
   },
   {
     id: "Jhx0Pn-N1H5yinkwXt4IM",
@@ -397,7 +391,7 @@ const companies: Company[] = [
     ],
     labels: ["Social Media"],
     annualContractValue: 10000,
-    logoURL: "https://staticassets.commandbar.com/showcase/vine.png",
+    icon: "https://staticassets.commandbar.com/showcase/vine.png",
   },
   {
     id: "jCdnnZ-9gIP4TgQo8T2nX",
@@ -414,7 +408,7 @@ const companies: Company[] = [
     ],
     labels: ["Entertainment"],
     annualContractValue: 1000,
-    logoURL: "https://staticassets.commandbar.com/showcase/blockbuster.png",
+    icon: "https://staticassets.commandbar.com/showcase/blockbuster.png",
   },
   {
     id: "4Okqoer1hct1FYPgVmZxq",
@@ -436,7 +430,7 @@ const companies: Company[] = [
     ],
     labels: ["Technology"],
     annualContractValue: 100000,
-    logoURL: "https://staticassets.commandbar.com/showcase/hooli.jpeg",
+    icon: "https://staticassets.commandbar.com/showcase/hooli.jpeg",
   },
 ];
 

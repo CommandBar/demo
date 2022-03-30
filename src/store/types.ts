@@ -16,7 +16,7 @@ export interface Company {
   annualContractValue: number;
   updatedAt?: number;
   reminder?: string;
-  logoURL?: string;
+  icon?: string;
 }
 
 export interface CompanyNote {
@@ -36,7 +36,7 @@ export interface Integration {
   title: "Slack" | "Jira" | "Hubspot" | "Salesforce";
   iconURL: string;
   text: string;
-  enabled: false;
+  enabled: boolean;
 }
 
 export interface User {
