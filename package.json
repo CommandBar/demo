@@ -43,7 +43,6 @@
   "devDependencies": {
     "autoprefixer": "^10.4.4",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-tailwindcss": "^3.5.0",
     "eslint-plugin-valtio": "^0.4.2",
     "postcss": "^8.4.12",
     "prettier": "^2.6.1",

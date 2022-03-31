@@ -1,10 +1,4 @@
 {
-  "plugins": ["tailwindcss"],
-  "extends": [
-    "react-app",
-    "eslint:recommended",
-    "plugin:valtio/recommended",
-    "plugin:tailwindcss/recommended",
-    "prettier"
-  ]
+  "plugins": [],
+  "extends": ["react-app", "react-app/jest", "plugin:valtio/recommended", "prettier"]
 }
