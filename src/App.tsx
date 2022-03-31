@@ -1,10 +1,9 @@
-import { BrowserRouter } from 'react-router-dom';
 import Layout from './components/Layout';
+import useCommandBar from './useCommandBar';
 
 function App() {
-  return (
-      <Layout />
-  );
+  useCommandBar();
+  return <Layout />;
 }
 
 export default App;
