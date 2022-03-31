@@ -25,7 +25,7 @@ export default function CompanyDetail() {
 
   const breadcrumbs = [
     { name: "Leads", href: "/leads" },
-    { name: company.name, href: `/leads/${company.id}` },
+    { name: company.label, href: `/leads/${company.id}` },
   ];
   return (
     <>
@@ -50,7 +50,7 @@ export default function CompanyDetail() {
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">
-                  {company.name}
+                  {company.label}
                 </h1>
               </div>
             </div>
@@ -112,7 +112,7 @@ export default function CompanyDetail() {
                           Stage
                         </dt>
                         <dd className="mt-1 text-sm text-gray-900">
-                          {stage?.name}
+                          {stage?.label}
                         </dd>
                       </div>
                       <div className="sm:col-span-2">

@@ -16,7 +16,7 @@ export default function CompanyDetail() {
 
   const breadcrumbs = [
     { name: "Leads", href: "/leads" },
-    { name: company.name, href: `/leads/${company.id}` },
+    { name: company.label, href: `/leads/${company.id}` },
     { name: "Edit", href: `/leads/${company.id}/edit` },
   ];
 
@@ -75,7 +75,7 @@ export default function CompanyDetail() {
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">
-                  (Editing) {company.name}
+                  (Editing) {company.label}
                 </h1>
               </div>
             </div>
@@ -160,7 +160,7 @@ export default function CompanyDetail() {
                           >
                             {snapshot.stages.map((s) => (
                               <option key={s.id} value={s.id}>
-                                {s.name}
+                                {s.label}
                               </option>
                             ))}
                           </select>

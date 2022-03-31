@@ -5,7 +5,7 @@ import { Company } from "../types";
 const companies: Company[] = [
   {
     id: "MFx7N8NQJFOV5e7yTGyBQ",
-    name: "The Krusty Krab",
+    label: "The Krusty Krab",
     stageId: "5",
     contactEmail: "eugene@krustykrabs.com",
     contactName: "Eugene H. Krabs",
@@ -22,7 +22,7 @@ const companies: Company[] = [
   },
   {
     id: "0CdnnZ-9gIP4TgQo8T2nX",
-    name: "GameStop",
+    label: "GameStop",
     stageId: "5",
     contactEmail: "roaringkitty@wsb.com",
     contactName: "Roaring Kitty",
@@ -49,7 +49,7 @@ const companies: Company[] = [
   },
   {
     id: "6ceGtjdiPqc3FiKtsur4O",
-    name: "Stark Industries",
+    label: "Stark Industries",
     stageId: "6",
     contactEmail: "tony@starkindustries.com",
     contactName: "Tony Stark",
@@ -66,7 +66,7 @@ const companies: Company[] = [
   },
   {
     id: "rWi0oXecycPPGlHJucEHs",
-    name: "Wayne Enterprises, Inc.",
+    label: "Wayne Enterprises, Inc.",
     stageId: "6",
     contactEmail: "bruce@wayneenterprisesinc.com",
     contactName: "Bruce Wayne",
@@ -83,7 +83,7 @@ const companies: Company[] = [
   },
   {
     id: "d1aF3rxUGoKDA03Wiman1",
-    name: "Iron Bank of Braavos",
+    label: "Iron Bank of Braavos",
     stageId: "1",
     contactEmail: "tycho@ironbankofbraavos.com",
     contactName: "Tycho Nestoris",
@@ -100,7 +100,7 @@ const companies: Company[] = [
   },
   {
     id: "CXoEenzQAul06-Aeij_Ll",
-    name: "Monsters, Inc.",
+    label: "Monsters, Inc.",
     stageId: "6",
     contactEmail: "james@monstersinc.com",
     contactName: 'James P. "Sulley" Sullivan',
@@ -117,7 +117,7 @@ const companies: Company[] = [
   },
   {
     id: "ItTyBih2sa79gh7VWSaZB",
-    name: "Bluth Company",
+    label: "Bluth Company",
     stageId: "1",
     contactEmail: "michael@bluth.com",
     contactName: "Michael Bluth",
@@ -134,7 +134,7 @@ const companies: Company[] = [
   },
   {
     id: "RYqEEksfj8LxcnXfD_w9f",
-    name: "Pawnee Parks & Recreation",
+    label: "Pawnee Parks & Recreation",
     stageId: "2",
     contactEmail: "tom@entertainment720.com",
     contactName: "Tom Haverford",
@@ -161,7 +161,7 @@ const companies: Company[] = [
   },
   {
     id: "0QYl_JHP3SZkNr4SbP7O-",
-    name: "Kim's Convenience",
+    label: "Kim's Convenience",
     stageId: "3",
     contactEmail: "janet@kims.com",
     contactName: "Janet Kim",
@@ -183,7 +183,7 @@ const companies: Company[] = [
   },
   {
     id: "ai46vK2dHkr0SWnAKMbOj",
-    name: "Pearson Specter Litt",
+    label: "Pearson Specter Litt",
     stageId: "1",
     contactEmail: "harvey@pearsonspecterlitt.com",
     contactName: "Harvey Specter",
@@ -200,7 +200,7 @@ const companies: Company[] = [
   },
   {
     id: "AhRbdE9E-QUaIkk3QiBYD",
-    name: "Pied Piper",
+    label: "Pied Piper",
     stageId: "3",
     contactEmail: "richard@piedpiper.com",
     contactName: "Richard Hendricks",
@@ -222,7 +222,7 @@ const companies: Company[] = [
   },
   {
     id: "dRqjKQyfxeVqkwklZAYo9",
-    name: "Rent a Swag",
+    label: "Rent a Swag",
     stageId: "2",
     contactEmail: "tom@rentaswag.com",
     contactName: "Tom Haverford",
@@ -239,7 +239,7 @@ const companies: Company[] = [
   },
   {
     id: "gduWOGE_bH9dYKWoCUSdU",
-    name: "The Derek Zoolander Center",
+    label: "The Derek Zoolander Center",
     stageId: "1",
     contactEmail: "derek@zoolandercenter.com",
     contactName: "Derek Zoolander",
@@ -261,7 +261,7 @@ const companies: Company[] = [
   },
   {
     id: "6EDvml-61PHLGZEW8rZTc",
-    name: "Theranos",
+    label: "Theranos",
     stageId: "4",
     contactEmail: "elizabeth@theranos.com",
     contactName: "Elizabeth Holmes",
@@ -278,7 +278,7 @@ const companies: Company[] = [
   },
   {
     id: "dynA6j-STLk2hLiC5R5jR",
-    name: "Juicero",
+    label: "Juicero",
     stageId: "7",
     contactEmail: "jeff@juicero.com",
     contactName: "Jeff Dunn",
@@ -300,7 +300,7 @@ const companies: Company[] = [
   },
   {
     id: "nLMRSN-0ip0oI9jLTDbYL",
-    name: "Lehman Brothers",
+    label: "Lehman Brothers",
     stageId: "6",
     contactEmail: "richard@lehmanbros.com",
     contactName: "Richard Fuld",
@@ -317,7 +317,7 @@ const companies: Company[] = [
   },
   {
     id: "1yjvoe-kPTv9TGvpA9z5z",
-    name: "Quibi",
+    label: "Quibi",
     stageId: "2",
     contactEmail: "jeffrey@quibi.com",
     contactName: "Jeffrey Katzenberg",
@@ -334,7 +334,7 @@ const companies: Company[] = [
   },
   {
     id: "wo25pG-YkhOUiTycEze0m",
-    name: "Myspace",
+    label: "Myspace",
     stageId: "4",
     contactEmail: "tom@myspace.com",
     contactName: "Tom Anderson",
@@ -356,7 +356,7 @@ const companies: Company[] = [
   },
   {
     id: "mH1g0l-J3BPxIV9uCRJLE",
-    name: "Yik Yak",
+    label: "Yik Yak",
     stageId: "1",
     contactEmail: "tyler@yikyak.com",
     contactName: "Tyler Droll",
@@ -373,7 +373,7 @@ const companies: Company[] = [
   },
   {
     id: "Jhx0Pn-N1H5yinkwXt4IM",
-    name: "Vine",
+    label: "Vine",
     stageId: "7",
     contactEmail: "dom@vine.com",
     contactName: "Dom Hoffman",
@@ -395,7 +395,7 @@ const companies: Company[] = [
   },
   {
     id: "jCdnnZ-9gIP4TgQo8T2nX",
-    name: "Blockbuster",
+    label: "Blockbuster",
     stageId: "6",
     contactEmail: "wayne@blockbuster.com",
     contactName: "Wayne Huizenga",
@@ -412,7 +412,7 @@ const companies: Company[] = [
   },
   {
     id: "4Okqoer1hct1FYPgVmZxq",
-    name: "Hooli",
+    label: "Hooli",
     stageId: "7",
     contactEmail: "gavin@hooli.com",
     contactName: "Gavin Belson",

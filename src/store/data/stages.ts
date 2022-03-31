@@ -3,31 +3,31 @@ import { Stage } from "../types";
 const stages: Stage[] = [
   {
     id: "1",
-    name: "Lead generated",
+    label: "Lead generated",
   },
   {
     id: "2",
-    name: "Contacted",
+    label: "Contacted",
   },
   {
     id: "3",
-    name: "Qualified",
+    label: "Qualified",
   },
   {
     id: "4",
-    name: "Trial completed",
+    label: "Trial completed",
   },
   {
     id: "5",
-    name: "Contract negotiation",
+    label: "Contract negotiation",
   },
   {
     id: "6",
-    name: "Post-sale",
+    label: "Post-sale",
   },
   {
     id: "7",
-    name: "Lost",
+    label: "Lost",
   },
 ];
 

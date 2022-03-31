@@ -7,7 +7,7 @@ declare module "valtio" {
 /** Companies */
 export interface Company {
   id: string;
-  name: string;
+  label: string;
   stageId: string;
   contactName: string;
   contactEmail: string;
@@ -28,7 +28,7 @@ export interface CompanyNote {
 
 export interface Stage {
   id: string;
-  name: string;
+  label: string;
 }
 
 /** Integrations */

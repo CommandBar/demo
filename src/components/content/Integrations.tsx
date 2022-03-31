@@ -22,7 +22,7 @@ export default function Example() {
             idx === integrations.length - 1
               ? "rounded-bl-lg rounded-br-lg sm:rounded-bl-none"
               : "",
-            "relative group bg-white p-10 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500"
+            "relative group bg-white p-10 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500 cursor-pointer"
           )}
           onClick={() => openIntegrationDetail(integration)}
         >

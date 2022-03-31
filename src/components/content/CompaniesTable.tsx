@@ -83,7 +83,7 @@ const CompanyRow = (props: { company: Company }) => {
             <img className="h-10 w-10 rounded-full" src={company.icon} alt="" />
           </div>
           <div className="ml-4 text-left">
-            <div className="text-gray-900">{company.name}</div>
+            <div className="text-gray-900">{company.label}</div>
           </div>
         </div>
       </td>
@@ -93,7 +93,7 @@ const CompanyRow = (props: { company: Company }) => {
       </td>
       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
         <span className="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">
-          {selectStageOfCompany(snapshot, company)?.name}
+          {selectStageOfCompany(snapshot, company)?.label}
         </span>
       </td>
     </tr>
