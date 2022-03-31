@@ -6,7 +6,7 @@ import { selectCompanyById } from '../../store/selectors';
 import _ from '../../store/store';
 import Breadcrumbs from '../Breadcrumbs';
 
-export default function CompanyDetail() {
+export default function CompanyEdit() {
   const { id } = useParams();
   const snapshot = useSnapshot(_);
 
