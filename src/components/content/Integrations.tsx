@@ -17,13 +17,11 @@ export default function Integrations() {
         <div
           key={integration.title}
           className={classNames(
-            idx === 0 ? "rounded-tl-lg rounded-tr-lg sm:rounded-tr-none" : "",
-            idx === 1 ? "sm:rounded-tr-lg" : "",
-            idx === integrations.length - 2 ? "sm:rounded-bl-lg" : "",
-            idx === integrations.length - 1
-              ? "rounded-bl-lg rounded-br-lg sm:rounded-bl-none"
-              : "",
-            "relative group bg-white p-10 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500 cursor-pointer"
+            idx === 0 ? 'rounded-tl-lg rounded-tr-lg sm:rounded-tr-none' : '',
+            idx === 1 ? 'sm:rounded-tr-lg' : '',
+            idx === integrations.length - 2 ? 'sm:rounded-bl-lg' : '',
+            idx === integrations.length - 1 ? 'rounded-bl-lg rounded-br-lg sm:rounded-bl-none' : '',
+            'relative group bg-white p-10 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500 cursor-pointer',
           )}
           onClick={() => openIntegrationDetail(integration)}
         >
@@ -43,7 +41,7 @@ export default function Integrations() {
                 {integration.enabled ? 'Enabled' : 'Not enabled'}
               </div>
             </div>
-            <p className="mt-2 text-sm text-gray-500">{integration.text}</p>
+            <p className="mt-2 text-sm text-gray-500">{integration.subtitle}</p>
           </div>
 
           <span

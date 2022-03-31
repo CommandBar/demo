@@ -35,8 +35,9 @@ export interface Stage {
 export interface Integration {
   title: 'Slack' | 'Jira' | 'Hubspot' | 'Salesforce';
   iconURL: string;
-  text: string;
+  subtitle: string;
   enabled: boolean;
+  description: string;
 }
 
 export interface User {

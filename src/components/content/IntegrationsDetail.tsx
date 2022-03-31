@@ -30,10 +30,7 @@ export default function IntegrationsDetail() {
 
           <div className="mt-2 sm:flex sm:justify-between sm:items-start">
             <div className="max-w-xl text-sm text-gray-500">
-              <Switch.Description>
-                Slack is a workplace collaboration tool that can also send and receive event notifications. You can
-                configure notifications to be send whenever a lead is edited or a pipeline change occurs.
-              </Switch.Description>
+              <Switch.Description>{integration.description}</Switch.Description>
             </div>
 
             <div className="mt-5 sm:flex sm:shrink-0 sm:items-center sm:mt-0 sm:ml-6">

@@ -5,7 +5,7 @@ import { init } from 'commandbar';
 import { useNavigate } from 'react-router-dom';
 import { editCompanyDetails } from './store/actions';
 
-init('03daf5d9');
+init('a0ad6b4d');
 
 const useCommandBar = () => {
   const snapshot = useSnapshot(_);
@@ -16,7 +16,7 @@ const useCommandBar = () => {
 
     // add callback for changing company state
     const updateCompanyStage = (args: any, context: any) => {
-      editCompanyDetails(context.activeCompany.id, 'stageId', args.stage.id);
+      editCompanyDetails(context.activeLead.id, 'stageId', args.stage.id);
     };
     window.CommandBar.addCallback('editCompanyStage', updateCompanyStage);
   }, []);
