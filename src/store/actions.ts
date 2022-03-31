@@ -15,6 +15,7 @@ export const addNoteToCompany = (companyId: string, note: string | null) => {
     const company = store.companies.find((c) => c.id === companyId);
     if (company) {
       company.notes = [...company.notes, newNote];
+      addNotification('Company note added!', undefined);
     }
   }
 };
@@ -27,6 +28,7 @@ export const editCompanyDetails = (companyId: string, field: keyof Company, valu
   const company = store.companies.find((c) => c.id === companyId);
   if (company) {
     company[field] = value;
+    addNotification('Company successfully edited!', undefined);
   }
 };
 
@@ -34,5 +36,14 @@ export const changeIntegrationEnabled = (integrationTitle: string, enabled: bool
   const integration = store.integrations.find((v) => v.title === integrationTitle);
   if (integration) {
     integration.enabled = enabled;
+    addNotification(`${integration.title} integration ${integration.enabled ? 'enabled' : 'disabled'}!`, undefined);
   }
+};
+
+export const addNotification = (title: string, subtitle: string | undefined) => {
+  store.notifications = [...store.notifications, { title, subtitle }];
+};
+
+export const clearNotifications = () => {
+  store.notifications = [];
 };

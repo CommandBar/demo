@@ -43,3 +43,8 @@ export interface User {
   name: string;
   imgURL: string;
 }
+
+export interface Notification {
+  title: string;
+  subtitle?: string;
+}

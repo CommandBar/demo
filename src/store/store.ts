@@ -5,7 +5,7 @@ import { proxy } from 'valtio';
 import companies from './data/companies';
 import stages from './data/stages';
 import integrations from './data/integrations';
-import { Company, Integration, Stage, User } from './types';
+import { Company, Integration, Notification, Stage, User } from './types';
 
 export interface Store {
   activeCompany: Company | undefined;
@@ -14,6 +14,7 @@ export interface Store {
   integrations: Integration[];
   currentUser: User;
   otherUser: User;
+  notifications: Notification[];
 }
 
 const store: Store = proxy({
@@ -29,6 +30,7 @@ const store: Store = proxy({
     name: 'Pam Beesly',
     imgURL: 'https://staticassets.commandbar.com/showcase/pam_beesly.jpeg',
   },
+  notifications: [],
 });
 
 export default store;

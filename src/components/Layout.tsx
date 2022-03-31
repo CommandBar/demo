@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Content from './Content';
 import Header from './Header';
+import NotificationPanel from './NotificationPanel';
 import Sidebar from './Sidebar';
 
 export default function Layout() {
@@ -21,6 +22,7 @@ export default function Layout() {
           </main>
         </div>
       </div>
+      <NotificationPanel />
     </div>
   );
 }
