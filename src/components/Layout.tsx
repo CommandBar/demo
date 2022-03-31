@@ -11,7 +11,7 @@ export default function Example() {
       <div>
         <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         <div className="md:pl-64">
-          <div className="max-w-4xl mx-auto flex flex-col md:px-8 xl:px-0">
+          <div className="flex flex-col mx-auto max-w-4xl md:px-8 xl:px-0">
             <Header setSidebarOpen={setSidebarOpen} />
             <main className="flex-1">
               <div className="py-6">

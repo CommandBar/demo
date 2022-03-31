@@ -1,10 +1,10 @@
-import { nanoid } from "nanoid";
-import { formatISO } from "../components/utils";
-import store from "./store";
-import { Company, CompanyNote } from "./types";
+import { nanoid } from 'nanoid';
+import { formatISO } from '../components/utils';
+import store from './store';
+import { Company, CompanyNote } from './types';
 
 export const addNoteToCompany = (companyId: string, note: string | null) => {
-  if (!!note) {
+  if (note) {
     const newNote: CompanyNote = {
       id: nanoid(),
       text: note,
@@ -19,11 +19,7 @@ export const addNoteToCompany = (companyId: string, note: string | null) => {
   }
 };
 
-export const editCompanyDetails = (
-  companyId: string,
-  field: keyof Company,
-  value: any
-) => {
+export const editCompanyDetails = (companyId: string, field: keyof Company, value: any) => {
   const company = store.companies.find((c) => c.id === companyId);
   if (company) {
     // @ts-ignore
@@ -31,13 +27,8 @@ export const editCompanyDetails = (
   }
 };
 
-export const changeIntegrationEnabled = (
-  integrationTitle: string,
-  enabled: boolean
-) => {
-  const integration = store.integrations.find(
-    (v) => v.title === integrationTitle
-  );
+export const changeIntegrationEnabled = (integrationTitle: string, enabled: boolean) => {
+  const integration = store.integrations.find((v) => v.title === integrationTitle);
   if (integration) {
     integration.enabled = enabled;
   }

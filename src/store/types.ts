@@ -33,7 +33,7 @@ export interface Stage {
 
 /** Integrations */
 export interface Integration {
-  title: "Slack" | "Jira" | "Hubspot" | "Salesforce";
+  title: 'Slack' | 'Jira' | 'Hubspot' | 'Salesforce';
   iconURL: string;
   text: string;
   enabled: boolean;
