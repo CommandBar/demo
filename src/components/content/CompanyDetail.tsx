@@ -173,7 +173,7 @@ export default function CompanyDetail() {
 
                             const form = document.getElementById('add-note-form') as HTMLFormElement;
                             if (form) {
-                              const data = new FormData(form as HTMLFormElement);
+                              const data = new FormData(form);
 
                               addNoteToCompany(company.id, data.get('comment') as string | null);
                               form.reset();
