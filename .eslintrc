@@ -1,4 +1,4 @@
 {
   "plugins": [],
-  "extends": ["react-app", "react-app/jest", "plugin:valtio/recommended", "prettier"]
+  "extends": ["react-app", "react-app/jest", "plugin:valtio/recommended"]
 }
