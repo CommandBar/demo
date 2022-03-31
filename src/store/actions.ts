@@ -19,10 +19,9 @@ export const addNoteToCompany = (companyId: string, note: string | null) => {
   }
 };
 
-export const editCompanyDetails = (companyId: string, field: keyof Company, value: any) => {
+export const editCompanyDetails = (companyId: string, field: keyof Company, value: unknown) => {
   const company = store.companies.find((c) => c.id === companyId);
   if (company) {
-    // @ts-ignore
     company[field] = value;
   }
 };

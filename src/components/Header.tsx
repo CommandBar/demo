@@ -1,11 +1,12 @@
 import { MenuAlt2Icon } from '@heroicons/react/outline';
 import { SearchIcon } from '@heroicons/react/solid';
+import { Dispatch, SetStateAction } from 'react';
 import { useSnapshot } from 'valtio';
 import _ from '../store/store';
 
-export default function Header(props: { setSidebarOpen: (open: boolean) => void }) {
+export default function Header({ setSidebarOpen }: { setSidebarOpen: Dispatch<SetStateAction<boolean>> }) {
   const { currentUser } = useSnapshot(_);
-  const { setSidebarOpen } = props;
+
   return (
     <div className="flex sticky top-0 z-10 shrink-0 h-16 bg-white border-b border-gray-200">
       <button

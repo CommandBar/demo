@@ -1,3 +1,4 @@
+import { FormEvent } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSnapshot } from 'valtio';
 import { editCompanyDetails } from '../../store/actions';
@@ -20,7 +21,7 @@ export default function CompanyDetail() {
     { name: 'Edit', href: `/leads/${company.id}/edit` },
   ];
 
-  const onSave = (e: any) => {
+  const onSave = (e: FormEvent) => {
     e.preventDefault();
 
     const form = document.getElementById('edit-company-form') as HTMLFormElement | null;

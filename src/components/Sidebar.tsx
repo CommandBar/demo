@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Dispatch, Fragment, SetStateAction } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { InboxIcon, UsersIcon, XIcon } from '@heroicons/react/outline';
 import classNames from './utils';
@@ -13,8 +13,12 @@ const navigation = [
   },
 ];
 
-export default function Sidebar(props: { sidebarOpen: boolean; setSidebarOpen: (open: boolean) => void }) {
-  const { sidebarOpen, setSidebarOpen } = props;
+interface SidebarProps {
+  sidebarOpen: boolean;
+  setSidebarOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+export default function Sidebar({ sidebarOpen, setSidebarOpen }: SidebarProps) {
   const location = useLocation();
 
   const isActive = (menuElemPath: string) => (location.pathname + location.hash).startsWith(menuElemPath);

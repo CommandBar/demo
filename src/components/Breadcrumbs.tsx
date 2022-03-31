@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { HomeIcon } from '@heroicons/react/solid';
 import { Link } from 'react-router-dom';
 
@@ -7,9 +6,7 @@ interface Breadcrumb {
   href: string;
 }
 
-export default function Example(props: { breadcrumbs: Breadcrumb[] }) {
-  const { breadcrumbs } = props;
-
+export default function Breadcrumbs({ breadcrumbs }: { breadcrumbs: Breadcrumb[] }) {
   const isLast = (idx: number) => idx === breadcrumbs.length - 1;
 
   return (
