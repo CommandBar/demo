@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# LWJ Demo!
+
+A little CRUD-y site to showcase how CommandBar works and is configured.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
