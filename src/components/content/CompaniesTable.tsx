@@ -52,14 +52,14 @@ export default function CompaniesTable() {
   );
 }
 
-const CompanyRow = (props: { company: Company }) => {
-  const { company } = props;
+const CompanyRow = ({ company }: { company: Company }) => {
   const snapshot = useSnapshot(_);
   const navigate = useNavigate();
 
   const onClick = () => {
     navigate(`/leads/${company.id}`);
   };
+
   return (
     <tr key={company.contactEmail} onClick={onClick} className="hover:shadow-lg transition-all cursor-pointer">
       <td className="py-4 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-6">

@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Switch } from '@headlessui/react';
 import { useParams } from 'react-router-dom';
 import classNames from '../utils';
@@ -8,7 +7,7 @@ import _ from '../../store/store';
 import Breadcrumbs from '../Breadcrumbs';
 import { changeIntegrationEnabled } from '../../store/actions';
 
-export default function Example() {
+export default function IntegrationsDetail() {
   const { title } = useParams();
 
   const integration = selectIntegrationByTitle(useSnapshot(_), title);

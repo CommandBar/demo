@@ -4,12 +4,13 @@ import _ from '../../store/store';
 import { Integration } from '../../store/types';
 import { useNavigate } from 'react-router-dom';
 
-export default function Example() {
+export default function Integrations() {
   const { integrations } = useSnapshot(_);
   const navigate = useNavigate();
   const openIntegrationDetail = (integration: Integration) => {
     navigate(`/integrations/${integration.title}`);
   };
+
   return (
     <div className="overflow-hidden m-12 bg-gray-200 rounded-lg divide-y divide-gray-200 shadow sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0">
       {integrations.map((integration, idx) => (
