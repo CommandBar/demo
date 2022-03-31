@@ -30,7 +30,7 @@ const useCommandBar = () => {
 
   // add companies to context (and subscribe to changes)
   React.useEffect(() => {
-    window.CommandBar.addContext('companies', snapshot.companies);
+    window.CommandBar.addContext('leads', snapshot.companies);
   }, [snapshot.companies]);
 
   // add stages to context (and subscribe to changes, though none are made in this demo)
@@ -40,7 +40,7 @@ const useCommandBar = () => {
 
   // add active company to context (and subscribe to changes)
   React.useEffect(() => {
-    window.CommandBar.addContext('activeCompany', snapshot.activeCompany);
+    window.CommandBar.addContext('activeLead', snapshot.activeCompany);
   }, [snapshot.activeCompany]);
 };
 
