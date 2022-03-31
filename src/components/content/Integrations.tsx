@@ -40,11 +40,15 @@ export default function Example() {
             </span>
           </div>
           <div className="mt-4">
-            <h3 className="text-lg font-medium">
-              {/* Extend touch target to entire panel */}
-              <span className="absolute inset-0" aria-hidden="true" />
-              {integration.title}
-            </h3>
+            <div className="flex justify-between items-center">
+              <h3 className="text-lg font-medium">
+                {/* Extend touch target to entire panel */}
+                {integration.title}
+              </h3>
+              <div className="text-sm text-gray-400 font-semibold">
+                {integration.enabled ? "Enabled" : "Not enabled"}
+              </div>
+            </div>
             <p className="mt-2 text-sm text-gray-500">{integration.text}</p>
           </div>
           <span
