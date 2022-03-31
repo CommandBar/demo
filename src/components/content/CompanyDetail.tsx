@@ -1,16 +1,22 @@
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useSnapshot } from 'valtio';
-import { addNoteToCompany } from '../../store/actions';
+import { addNoteToCompany, setActiveCompany } from '../../store/actions';
 import _ from '../../store/store';
 import { selectCompanyById, selectStageOfCompany } from '../../store/selectors';
 import { CompanyNote, User } from '../../store/types';
 import Breadcrumbs from '../Breadcrumbs';
+import { useEffect } from 'react';
 
 export default function CompanyDetail() {
   const { id } = useParams();
   const snapshot = useSnapshot(_);
   const company = selectCompanyById(snapshot, id);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setActiveCompany(company);
+    return () => setActiveCompany(undefined);
+  }, [company]);
 
   if (!company) return <div>Not found</div>;
 

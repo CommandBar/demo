@@ -19,6 +19,10 @@ export const addNoteToCompany = (companyId: string, note: string | null) => {
   }
 };
 
+export const setActiveCompany = (company: Company | undefined) => {
+  store.activeCompany = company;
+};
+
 export const editCompanyDetails = (companyId: string, field: keyof Company, value: unknown) => {
   const company = store.companies.find((c) => c.id === companyId);
   if (company) {
