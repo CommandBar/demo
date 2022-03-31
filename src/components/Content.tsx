@@ -1,10 +1,10 @@
-import { Navigate, Route, Routes } from "react-router-dom";
-import CompaniesTable from "./content/CompaniesTable";
-import CompanyDetail from "./content/CompanyDetail";
-import CompanyEdit from "./content/CompanyEdit";
-import Integrations from "./content/Integrations";
-import IntegrationsDetail from "./content/IntegrationsDetail";
-import ScrollToTop from "./ScrollToTop";
+import { Navigate, Route, Routes } from 'react-router-dom';
+import CompaniesTable from './content/CompaniesTable';
+import CompanyDetail from './content/CompanyDetail';
+import CompanyEdit from './content/CompanyEdit';
+import Integrations from './content/Integrations';
+import IntegrationsDetail from './content/IntegrationsDetail';
+import ScrollToTop from './ScrollToTop';
 
 const Content = () => {
   return (
@@ -20,4 +20,5 @@ const Content = () => {
     </ScrollToTop>
   );
 };
+
 export default Content;
